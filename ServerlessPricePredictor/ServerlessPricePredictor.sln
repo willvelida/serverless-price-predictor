@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerlessPricePredictor.ModelTrainer", "ServerlessPricePredictor.ModelTrainer\ServerlessPricePredictor.ModelTrainer.csproj", "{3D2FDE9C-3C20-4FFD-8CC6-C88D68C298F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D2FDE9C-3C20-4FFD-8CC6-C88D68C298F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D2FDE9C-3C20-4FFD-8CC6-C88D68C298F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D2FDE9C-3C20-4FFD-8CC6-C88D68C298F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D2FDE9C-3C20-4FFD-8CC6-C88D68C298F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C8B022A-421D-47B0-997B-C5A2F97DADC4}
+	EndGlobalSection
+EndGlobal

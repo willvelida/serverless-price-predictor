@@ -3,6 +3,7 @@ using Microsoft.Azure.Storage.Auth;
 using Microsoft.Azure.Storage.Blob;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,6 +14,7 @@ namespace ServerlessPricePredictor.ModelTrainer.Helpers
         CloudBlobClient ConnectToBlobClient(string accountName, string accountKey);
         CloudBlobContainer GetBlobContainer(CloudBlobClient client, string containerName);
         Task UploadBlobToStorage(CloudBlobContainer cloudBlobContainer, string blobName);
+        Task DownloadBlob(CloudBlobContainer cloudBlobContainer, string blobName);
     }
 
     public class AzureStorageHelpers : IAzureStorageHelpers
@@ -52,6 +54,12 @@ namespace ServerlessPricePredictor.ModelTrainer.Helpers
         {
             CloudBlockBlob cloudBlockBlob = cloudBlobContainer.GetBlockBlobReference(blobName);
             await cloudBlockBlob.UploadFromFileAsync(blobName);
+        }
+
+        public async Task DownloadBlob(CloudBlobContainer cloudBlobContainer, string blobName)
+        {
+            CloudBlockBlob cloudBlockBlob = cloudBlobContainer.GetBlockBlobReference(blobName);
+            await cloudBlockBlob.DownloadToFileAsync(blobName, FileMode.Open);
         }
     }
 }

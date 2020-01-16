@@ -10,6 +10,12 @@
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.28" />
   </ItemGroup>
   <ItemGroup>
+    <None Update="Data\taxi-fare-test.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\taxi-fare-train.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="host.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

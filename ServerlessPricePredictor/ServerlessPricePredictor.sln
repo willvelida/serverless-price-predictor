@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerlessPricePredictor.ModelTrainer", "ServerlessPricePredictor.ModelTrainer\ServerlessPricePredictor.ModelTrainer.csproj", "{3D2FDE9C-3C20-4FFD-8CC6-C88D68C298F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerlessPricePredictor.ModelTrainer", "ServerlessPricePredictor.ModelTrainer\ServerlessPricePredictor.ModelTrainer.csproj", "{3D2FDE9C-3C20-4FFD-8CC6-C88D68C298F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerlessPricePredictor.API", "ServerlessPricePredictor.API\ServerlessPricePredictor.API.csproj", "{7348FF85-1D29-4FEA-89F3-C4F26B92DB44}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{3D2FDE9C-3C20-4FFD-8CC6-C88D68C298F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D2FDE9C-3C20-4FFD-8CC6-C88D68C298F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D2FDE9C-3C20-4FFD-8CC6-C88D68C298F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7348FF85-1D29-4FEA-89F3-C4F26B92DB44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7348FF85-1D29-4FEA-89F3-C4F26B92DB44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7348FF85-1D29-4FEA-89F3-C4F26B92DB44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7348FF85-1D29-4FEA-89F3-C4F26B92DB44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

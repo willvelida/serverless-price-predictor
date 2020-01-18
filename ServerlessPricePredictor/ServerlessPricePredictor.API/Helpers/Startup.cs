@@ -4,7 +4,9 @@ using Microsoft.Azure.WebJobs.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.ML;
 using ServerlessPricePredictor.API.Helpers;
+using ServerlessPricePredictor.API.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +26,12 @@ namespace ServerlessPricePredictor.API.Helpers
 
             var config = (IConfiguration)builder.Services.First(d => d.ServiceType == typeof(IConfiguration)).ImplementationInstance;
 
+            builder.Services.AddPredictionEnginePool<TaxiTrip, TaxiTripFarePrediction>()
+                .FromUri(
+                    modelName: "TaxiTripModel",
+                    uri: "https://velidastorage.blob.core.windows.net/mlmodels/Model.zip",
+                    period: TimeSpan.FromMinutes(1));
+
             builder.Services.AddSingleton((s) =>
             {
                 CosmosClientBuilder cosmosClientBuilder = new CosmosClientBuilder(config[Settings.COSMOS_DB_CONNECTION_STRING]);
@@ -31,6 +39,8 @@ namespace ServerlessPricePredictor.API.Helpers
                 return cosmosClientBuilder.WithConnectionModeDirect()
                     .Build();
             });
+
+            
         }
     }
 }

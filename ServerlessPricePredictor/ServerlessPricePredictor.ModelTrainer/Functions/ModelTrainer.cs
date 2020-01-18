@@ -60,7 +60,7 @@ namespace ServerlessPricePredictor.ModelTrainer.Functions
 
         private async Task TrainAndSaveModel(MLContext mlContext, string trainFilePath, string testFilePath, string modelPath, CloudBlobContainer cloudBlobContainer)
         {
-            // Read flat file from Azure Storage
+            // Read flat file from local folder
             _logger.LogInformation("Loading the file into the pipeline");
             IDataView dataView = mlContext.Data.LoadFromTextFile<TaxiTrip>(trainFilePath, hasHeader: true, separatorChar: ',');
 

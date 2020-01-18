@@ -29,7 +29,7 @@ namespace ServerlessPricePredictor.API.Helpers
             builder.Services.AddPredictionEnginePool<TaxiTrip, TaxiTripFarePrediction>()
                 .FromUri(
                     modelName: "TaxiTripModel",
-                    uri: "https://velidastorage.blob.core.windows.net/mlmodels/Model.zip",
+                    uri: config[Settings.MODEL_URL],
                     period: TimeSpan.FromMinutes(1));
 
             builder.Services.AddSingleton((s) =>
